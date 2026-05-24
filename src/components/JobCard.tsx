@@ -1,3 +1,9 @@
+import shareIcon from "../assets/icons/share-08.svg";
+import bookmarkIcon from "../assets/icons/bookmark-01.svg";
+import officeIcon from "../assets/icons/office.svg";
+import locationIcon from "../assets/icons/location-05.svg";
+import coinsIcon from "../assets/icons/coins-01.svg";
+import chairIcon from "../assets/icons/office-chair.svg";
 import { useState } from "react";
 import "./JobCard.css";
 
@@ -17,27 +23,27 @@ const JobCard = ({ title, company, location, salary }: JobProps) => {
         <div className="jobHeader">
         <h2 className="jobTitle">{title}</h2>
         <div className="side-icons">
-            <img src="/src/assets/icons/share-08.svg" alt="" />
-            <img src="/src/assets/icons/bookmark-01.svg" alt="" />
+            <img src={shareIcon} alt="share" />
+            <img src={bookmarkIcon} alt="share" />
         </div>
     </div>
 
     {/* META INFO */}
     <div className="jobMeta">
         <div className="jobCompany">
-            <img src="/src/assets/icons/office.svg" alt="" />
+            <img src={officeIcon} alt="share" />
             <span>{company}</span>
         </div>
         <div className="jobLocation">
-            <img src="/src/assets/icons/location-05.svg" alt="" />
+            <img src={locationIcon} alt="share" />
             <span>{location}</span>
         </div>
         <div className="jobSalary">
-            <img src="/src/assets/icons/coins-01.svg" alt="" />
+            <img src={coinsIcon} alt="share" />
             <span>{salary}</span>
         </div>
         <div className="jobLevel">
-            <img src="/src/assets/icons/office-chair.svg" alt="" />
+            <img src={chairIcon} alt="share" />
             <span>Mid</span>
         </div>
     </div>

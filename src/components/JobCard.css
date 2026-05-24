@@ -27,11 +27,11 @@
 .side-icons {
     display: flex;
     gap: 12px;
-
 }
 .side-icons img {
     width: 20px;
-    height: 20px;  
+    height: 20px; 
+    cursor: pointer; 
 }
 
 .jobMeta img {
@@ -123,4 +123,47 @@
 .jobDetails li {
   margin-bottom: 6px;
   font-size: 14px;
+}
+
+
+/* responsivenes */
+@media (max-width: 768px) {
+  .jobCard {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .jobHeader {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .jobHeader h2 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .jobMeta {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .jobCompany,
+  .jobLocation,
+  .jobSalary,
+  .jobLevel {
+    font-size: 13px;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .jobDetails ul {
+    padding-left: 16px;
+  }
 }
