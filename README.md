@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Job Listing App (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple job listing application built with React, TypeScript, Conditional rendering and component-based architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Display list of jobs
+- Job cards with clean UI
+- Toggle job details (Show / Hide)
+- Conditional rendering
+- Component-based structure
+- Props handling between components
+- Basic state management with useState
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- CSS (vanilla)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+│
+├── components/
+│   ├── JobList.tsx
+│   ├── JobCard.tsx
+│   ├── JobCard.css
+│
+├── data/
+│   ├── jobs.ts
+│
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## How to Run
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Install dependencies
+```bash
+npm install
 ```
+
+### 2. Start development server
+```bash
+npm run dev
+```
+
+---
+
+## How It Works
+
+### Job Data
+Stored in `src/data/jobs.ts` as a static array of objects.
+
+### JobList Component
+- Maps through jobs
+- Handles conditional rendering
+- Passes props to JobCard
+
+### JobCard Component
+- Receives job data via props
+- Toggles job details using state
+- Displays job UI card
+
+---
+
+## Key Concepts Learned
+
+- React Components
+- Props
+- useState hook
+- Conditional rendering
+- List rendering (map)
+- Basic UI structuring
+
+---
+
+## Future Improvements
+
+- Add search & filtering
+- Add API integration
+- Add job bookmarking
+- Add animations
+- Improve UI with Tailwind CSS
+
+---
+
+## Author Comment
+
+Built as a learning project for mastering React fundamentals.
