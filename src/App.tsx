@@ -1,10 +1,11 @@
 import React from 'react';
 import './index.css'
+import JobList from "./components/JobList";
 
 function App() {
   return (
-    <div>
-      <h1>Job Listing App</h1>
+    <div style={{ padding: "20px" }}>
+      <JobList />
     </div>
   );
 }
