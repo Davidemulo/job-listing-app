@@ -21,51 +21,53 @@ const JobCard = ({ title, company, location, salary }: JobProps) => {
     <div className="jobCard">
         {/* HEADER*/}
         <div className="jobHeader">
-        <h2 className="jobTitle">{title}</h2>
-        <div className="side-icons">
-            <img src={shareIcon} alt="share" />
-            <img src={bookmarkIcon} alt="share" />
-        </div>
-    </div>
+          <div className="header">
+            <h2 className="jobTitle">{title}</h2>
+            <div className="side-icons">
+              <img src={shareIcon} alt="share" />
+              <img src={bookmarkIcon} alt="share" />
+            </div>
+          </div>
 
-    {/* META INFO */}
-    <div className="jobMeta">
-        <div className="jobCompany">
-            <img src={officeIcon} alt="share" />
-            <span>{company}</span>
+          {/* META INFO */}
+          <div className="jobMeta">
+            <div className="jobCompany">
+              <img src={officeIcon} alt="share" />
+              <span>{company}</span>
+            </div>
+            <div className="jobLocation">
+              <img src={locationIcon} alt="share" />
+              <span>{location}</span>
+            </div>
+            <div className="jobSalary">
+              <img src={coinsIcon} alt="share" />
+              <span>{salary}</span>
+            </div>
+            <div className="jobLevel">
+              <img src={chairIcon} alt="share" />
+              <span>Mid</span>
+            </div>
+          </div>
+        
+          {/* BUTTON */}
+          <button className="primaryBtn" onClick={() => setExpanded(!expanded)}>
+          {expanded ? "Hide details" : "View details"}
+          </button>
         </div>
-        <div className="jobLocation">
-            <img src={locationIcon} alt="share" />
-            <span>{location}</span>
-        </div>
-        <div className="jobSalary">
-            <img src={coinsIcon} alt="share" />
-            <span>{salary}</span>
-        </div>
-        <div className="jobLevel">
-            <img src={chairIcon} alt="share" />
-            <span>Mid</span>
-        </div>
-    </div>
 
-    {/* BUTTON */}
-    <button className="primaryBtn" onClick={() => setExpanded(!expanded)}>
-    {expanded ? "Hide details" : "View details"}
-    </button>
-
-    {/* EXPANDED SECTION */}
-    {expanded && (
-        <div className="jobDetails">
-          <h4>Minimum Qualifications</h4>
-          <ul>
-            <li>Bachelor’s degree in Computer Science or related field</li>
-            <li>5+ years experience in software engineering</li>
-            <li>Experience with cloud platforms and system design</li>
-            <li>Knowledge of AI/LLMs and data systems</li>
-            <li>Strong programming skills (Python, Scala, R)</li>
-          </ul>
-        </div>
-      )}
+        {/* EXPANDED SECTION */}
+        {expanded && (
+            <div className="jobDetails">
+              <h4>Minimum Qualifications</h4>
+              <ul>
+                <li>Bachelor’s degree in Computer Science or related field</li>
+                <li>5+ years experience in software engineering</li>
+                <li>Experience with cloud platforms and system design</li>
+                <li>Knowledge of AI/LLMs and data systems</li>
+                <li>Strong programming skills (Python, Scala, R)</li>
+              </ul>
+            </div>
+          )}
     </div>
   );
 };
