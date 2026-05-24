@@ -140,11 +140,11 @@ body {
 /* responsivenes */
 @media (max-width: 768px) {
   .jobHeader {
-    padding: 16px;
+    padding: 20px;
   }
 
   .jobDetails {
-    padding: 16px;
+    padding: 20px;
   }
 
   .jobMeta {
